@@ -1,13 +1,13 @@
 {
-  "name": "jsamazona",
+  "name": "continentalfreemarket",
   "version": "1.0.0",
-  "description": "JS AMAZONA",
+  "description": "Continental Free market",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "start": "node backend/server.js",
     "build": "rm -rf dist && babel backend -d dist && cd frontend && npm install && npm run build",
-    "serve": "node dist/server.js",
-    "heroku-prebuild": "cd frontend && npm install --dev"
+    "vercel-build": "npm run build",
+    "serve": "node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -37,11 +37,10 @@
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "nodemon": "^2.0.4"
+    "eslint-plugin-import": "^2.22.0"
   },
   "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
+    "node": "22.x",
+    "npm": ">=8.0.0"
   }
 }
